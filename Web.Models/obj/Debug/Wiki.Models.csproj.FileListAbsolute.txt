@@ -1,0 +1,16 @@
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\bin\Debug\Web.Models.dll.config
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\bin\Debug\Web.Models.dll
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\bin\Debug\Web.Models.pdb
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\bin\Debug\EntityFramework.dll
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\bin\Debug\EntityFramework.xml
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\obj\Debug\Wiki.Models.csprojAssemblyReference.cache
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\obj\Debug\Wiki.Models.csproj.CoreCompileInputs.cache
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\obj\Debug\Wiki.Models.csproj.CopyComplete
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\obj\Debug\Web.Models.dll
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\obj\Debug\Web.Models.pdb
