@@ -10,12 +10,14 @@ namespace Wiki.Data
     public class PostComment
     {
         [Key]
-        public int CommentId { get; set; }
+        public int PostCommentId { get; set; }
         [Required]
-        public string CommentText { get; set; }
+        public string Text { get; set; }
         [Required]
         public Guid EditorId { get; set; }
         [Required]
-        public string  CommentCatagory { get; set; }
+        public string  Catagory { get; set; }
+
+        
     }
 }

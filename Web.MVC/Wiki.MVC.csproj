@@ -251,6 +251,7 @@
     <Content Include="Views\PostComment\Details.cshtml" />
     <Content Include="Views\PostComment\Edit.cshtml" />
     <Content Include="Views\PostComment\Delete.cshtml" />
+    <Content Include="Views\PostComment\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

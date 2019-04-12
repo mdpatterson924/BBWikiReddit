@@ -21,8 +21,8 @@ namespace Wiki.Services
                 new PostComment()
                 {
                     EditorId = _userId,
-                    CommentCatagory = model.CommentCatagory,
-                    CommentText = model.CommentText,
+                    Catagory = model.Catagory,
+                    Text = model.Text,
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -43,8 +43,8 @@ namespace Wiki.Services
                             e =>
                                 new PostCommentListItem
                                 {
-                                    CommentId = e.CommentId,
-                                    CommentCatagory = e.CommentCatagory,
+                                    PostCommentId = e.PostCommentId,
+                                    Catagory = e.Catagory,
                                    
                                 }
                         );
@@ -59,14 +59,14 @@ namespace Wiki.Services
                 var entity =
                     ctx
                         .PostComments
-                        .Single(e => e.EditorId == _userId && e.CommentId == noteId);
+                        .Single(e => e.EditorId == _userId && e.PostCommentId == noteId);
 
                 return
                     new PostCommentDetail
                     {
-                        CommentId = entity.CommentId,
-                        CommentCatagory = entity.CommentCatagory,
-                        CommentText = entity.CommentText,
+                        PostCommentId = entity.PostCommentId,
+                        Catagory = entity.Catagory,
+                        Text = entity.Text,
                     };
             }
         }
@@ -77,10 +77,10 @@ namespace Wiki.Services
                 var entity =
                 ctx
                    .PostComments
-                   .Single(e => e.CommentId == model.CommentId && e.EditorId == _userId);
+                   .Single(e => e.PostCommentId == model.PostCommentId && e.EditorId == _userId);
 
-                entity.CommentCatagory = model.CommentCatagory;
-                entity.CommentText = model.CommentText;
+                entity.Catagory = model.Catagory;
+                entity.Text = model.Text;
                 
 
                 return ctx.SaveChanges() == 1;
@@ -93,7 +93,7 @@ namespace Wiki.Services
                 var entity =
                 ctx
                    .PostComments
-                   .Single(e => e.EditorId == _userId && e.CommentId == id);
+                   .Single(e => e.EditorId == _userId && e.PostCommentId == id);
 
                 ctx.PostComments.Remove(entity);
 

@@ -10,7 +10,8 @@ namespace Wiki.Models
     public class PostCommentCreate
     {
         [Required]
-        public string CommentCatagory { get; set; }
-        public string CommentText { get; set; }
+        public string Catagory { get; set; }
+        public string Text { get; set; }
+        public int PostId { get; set; }
     }
 }

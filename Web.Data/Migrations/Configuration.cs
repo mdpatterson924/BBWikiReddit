@@ -10,7 +10,6 @@ namespace Web.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "Wiki.Data.ApplicationDbContext";
         }
 
         protected override void Seed(Wiki.Data.ApplicationDbContext context)

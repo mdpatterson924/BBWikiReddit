@@ -8,8 +8,8 @@ namespace Wiki.Models
 {
     public class PostCommentListItem
     {
-        public int CommentId { get; set; }
-        public string CommentCatagory { get; set; }
+        public int PostCommentId { get; set; }
+        public string Catagory { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
     }
 }

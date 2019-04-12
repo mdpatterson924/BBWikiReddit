@@ -9,13 +9,13 @@ namespace Wiki.Models
 {
     public class PostCommentDetail
     {
-        public int CommentId { get; set; }
-        public string CommentCatagory { get; set; }
-        public string CommentText { get; set; }
+        public int PostCommentId { get; set; }
+        public string Catagory { get; set; }
+        public string Text { get; set; }
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
         [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
-        public override string ToString() => $"[{CommentId}] {CommentCatagory}";
+        public override string ToString() => $"[{PostCommentId}] {Catagory}";
     }
 }

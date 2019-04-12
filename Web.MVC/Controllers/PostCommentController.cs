@@ -14,10 +14,16 @@ namespace Wiki.MVC.Controllers
         // GET: PostComment
         public ActionResult Index()
         {
-            return View();
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new PostCommentService(userId);
+            var model = service.GetPosts();
+            return View(model);
         }
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new PostService(userId);
+            ViewBag.PostDetails = service.GetPostById(id);
             return View();
         }
         [HttpPost]
@@ -50,9 +56,9 @@ namespace Wiki.MVC.Controllers
             var model =
                 new PostCommentEdit
                 {
-                    CommentId = detail.CommentId,
-                    CommentText = detail.CommentText,
-                    CommentCatagory = detail.CommentCatagory
+                    PostCommentId = detail.PostCommentId,
+                    Text = detail.Text,
+                    Catagory = detail.Catagory
                 };
             return View(model);
         }
@@ -62,7 +68,7 @@ namespace Wiki.MVC.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.CommentId != id)
+            if (model.PostCommentId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);
@@ -79,19 +85,22 @@ namespace Wiki.MVC.Controllers
             ModelState.AddModelError("", "Your note could not be updated.");
             return View(model);
         }
+        [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
             var svc = CreatePostCommentService();
             var model = svc.GetPostCommentById(id);
             return View(model);
         }
+        [HttpPost]
         [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
         public ActionResult DeleteComment(int id)
         {
             var svc = CreatePostCommentService();
-            var model = svc.GetPostCommentById(id);
+            var model = svc.DeletePostComment(id);
 
-            return View(model);
+            return RedirectToAction("Index");
         }
         private PostCommentService CreatePostCommentService()
         {

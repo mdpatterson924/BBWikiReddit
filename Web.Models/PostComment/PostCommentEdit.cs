@@ -8,8 +8,8 @@ namespace Wiki.Models
 {
     public class PostCommentEdit
     {
-        public int CommentId { get; set; }
-        public string CommentCatagory { get; set; }
-        public string CommentText { get; set; }
+        public int PostCommentId { get; set; }
+        public string Catagory { get; set; }
+        public string Text { get; set; }
     }
 }
