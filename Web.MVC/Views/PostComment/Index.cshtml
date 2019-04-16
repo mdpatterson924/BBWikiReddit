@@ -7,15 +7,15 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.CommentId)
+            @Html.DisplayNameFor(model => model.PostCommentId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CommentCatagory)
+            @Html.DisplayNameFor(model => model.Catagory)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CreatedUtc)
@@ -26,18 +26,18 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.CommentId)
+            @Html.DisplayFor(modelItem => item.PostCommentId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CommentCatagory)
+            @Html.DisplayFor(modelItem => item.Catagory)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CreatedUtc)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CommentId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CommentId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CommentId })
+            @Html.ActionLink("Edit", "Edit", new { id=item.PostCommentId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PostCommentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PostCommentId })
         </td>
     </tr>
 }

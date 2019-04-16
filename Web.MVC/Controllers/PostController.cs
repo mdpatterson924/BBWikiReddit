@@ -17,6 +17,7 @@ namespace Wiki.MVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new PostService(userId);
+            var pcservice = new PostCommentService(userId);
             var model = service.GetPosts();
             return View(model);
         }
@@ -42,7 +43,11 @@ namespace Wiki.MVC.Controllers
         {
             var svc = CreatePostService();
             var model = svc.GetPostById(id);
-            return View(model);
+            //ViewBag.PostComment = CreatePostCommentService().GetPosts(id);
+
+            var postComments = CreatePostCommentService().GetPosts(id);
+            var modelTwo = Tuple.Create(model, postComments);
+            return View(modelTwo);
         }
         public ActionResult Edit(int id)
         {
@@ -97,6 +102,12 @@ namespace Wiki.MVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new PostService(userId);
+            return service;
+        }
+        private PostCommentService CreatePostCommentService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new PostCommentService(userId);
             return service;
         }
     }

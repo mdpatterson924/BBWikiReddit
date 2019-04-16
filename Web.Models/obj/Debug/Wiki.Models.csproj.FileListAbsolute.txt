@@ -14,3 +14,6 @@ C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\obj\Debug\Wiki.Models.csproj.Co
 C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\obj\Debug\Wiki.Models.csproj.CopyComplete
 C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\obj\Debug\Web.Models.dll
 C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\obj\Debug\Web.Models.pdb
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\bin\Debug\Web.Data.dll
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\bin\Debug\Web.Data.pdb
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Models\bin\Debug\Web.Data.dll.config

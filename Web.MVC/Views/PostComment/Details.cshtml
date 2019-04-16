@@ -11,27 +11,27 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.CommentId)
+            @Html.DisplayNameFor(model => model.PostCommentId)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CommentId)
+            @Html.DisplayFor(model => model.PostCommentId)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CommentCatagory)
+            @Html.DisplayNameFor(model => model.Catagory)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CommentCatagory)
+            @Html.DisplayFor(model => model.Catagory)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CommentText)
+            @Html.DisplayNameFor(model => model.Text)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CommentText)
+            @Html.DisplayFor(model => model.Text)
         </dd>
 
         <dt>
@@ -53,6 +53,7 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CommentId }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PostCommentId }) |
     @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Create Thread", "Create", "Thread", new { id = Model.PostCommentId }, null)
 </p>

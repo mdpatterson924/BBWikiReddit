@@ -57,6 +57,7 @@
     <Compile Include="PostCommentService.cs" />
     <Compile Include="PostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThreadService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

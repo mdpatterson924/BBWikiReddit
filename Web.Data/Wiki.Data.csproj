@@ -59,10 +59,23 @@
     <Compile Include="Migrations\201904121936165_initial.Designer.cs">
       <DependentUpon>201904121936165_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904152019127_oneword.cs" />
+    <Compile Include="Migrations\201904152019127_oneword.Designer.cs">
+      <DependentUpon>201904152019127_oneword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904161330004_third.cs" />
+    <Compile Include="Migrations\201904161330004_third.Designer.cs">
+      <DependentUpon>201904161330004_third.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904161441250_forth.cs" />
+    <Compile Include="Migrations\201904161441250_forth.Designer.cs">
+      <DependentUpon>201904161441250_forth.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="PostComment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Thread.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -71,6 +84,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904121936165_initial.resx">
       <DependentUpon>201904121936165_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904152019127_oneword.resx">
+      <DependentUpon>201904152019127_oneword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904161330004_third.resx">
+      <DependentUpon>201904161330004_third.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904161441250_forth.resx">
+      <DependentUpon>201904161441250_forth.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

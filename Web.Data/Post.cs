@@ -13,8 +13,7 @@ namespace Wiki.Data
         public int PostId { get; set; }
         [Required]
         public Guid EditorId { get; set; }
-        [Required]
-        public DateTime DateTime { get; set; }
+
         [Required]
         public string Text { get; set; }
         [Required]

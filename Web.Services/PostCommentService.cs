@@ -23,6 +23,7 @@ namespace Wiki.Services
                     EditorId = _userId,
                     Catagory = model.Catagory,
                     Text = model.Text,
+                    PostId = model.PostId
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -31,14 +32,14 @@ namespace Wiki.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        public IEnumerable<PostCommentListItem> GetPosts()
+        public IEnumerable<PostCommentListItem> GetPosts(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
                         .PostComments
-                        .Where(e => e.EditorId == _userId)
+                        .Where(e => e.PostId == id)
                         .Select(
                             e =>
                                 new PostCommentListItem

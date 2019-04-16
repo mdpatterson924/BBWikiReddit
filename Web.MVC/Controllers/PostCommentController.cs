@@ -12,13 +12,7 @@ namespace Wiki.MVC.Controllers
     public class PostCommentController : Controller
     {
         // GET: PostComment
-        public ActionResult Index()
-        {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new PostCommentService(userId);
-            var model = service.GetPosts();
-            return View(model);
-        }
+      
         public ActionResult Create(int id)
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
@@ -40,7 +34,7 @@ namespace Wiki.MVC.Controllers
 
             service.CreatePostComment(model);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", "Post", model.PostId);
         }
         public ActionResult Details(int id)
         {

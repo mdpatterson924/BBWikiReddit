@@ -31,6 +31,7 @@ namespace Wiki.Data
         }
         public DbSet<Post> Posts { get; set; }
         public DbSet<PostComment> PostComments { get; set; }
+        public DbSet<Thread> Threads { get; set; }
 
     }
 }

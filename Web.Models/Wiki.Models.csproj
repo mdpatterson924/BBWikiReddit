@@ -58,16 +58,26 @@
     <Compile Include="PostComment\PostCommentDetail.cs" />
     <Compile Include="PostComment\PostCommentEdit.cs" />
     <Compile Include="PostComment\PostCommentListItem.cs" />
+    <Compile Include="PostDetailFullPage.cs" />
     <Compile Include="Post\PostCreate.cs" />
     <Compile Include="Post\PostDetail.cs" />
     <Compile Include="Post\PostEdit.cs" />
     <Compile Include="Post\PostListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Thread\ThreadCreate.cs" />
+    <Compile Include="Thread\ThreadDetail.cs" />
+    <Compile Include="Thread\ThreadEdit.cs" />
+    <Compile Include="Thread\ThreadListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Web.Data\Wiki.Data.csproj">
+      <Project>{BA9662E6-7C8D-4606-9E22-5DED9D0A62CA}</Project>
+      <Name>Wiki.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

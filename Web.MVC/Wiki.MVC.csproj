@@ -178,6 +178,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PostCommentController.cs" />
     <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="Controllers\ThreadController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -252,6 +253,11 @@
     <Content Include="Views\PostComment\Edit.cshtml" />
     <Content Include="Views\PostComment\Delete.cshtml" />
     <Content Include="Views\PostComment\Index.cshtml" />
+    <Content Include="Views\Thread\Create.cshtml" />
+    <Content Include="Views\Thread\Details.cshtml" />
+    <Content Include="Views\Thread\Edit.cshtml" />
+    <Content Include="Views\Thread\Delete.cshtml" />
+    <Content Include="Views\Thread\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

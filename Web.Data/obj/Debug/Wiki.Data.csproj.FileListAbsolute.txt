@@ -16,3 +16,6 @@ C:\Users\MattP\source\repos\Wiki-Redd\Web.Data\obj\Debug\Web.Data.dll
 C:\Users\MattP\source\repos\Wiki-Redd\Web.Data\obj\Debug\Web.Data.pdb
 C:\Users\MattP\source\repos\Wiki-Redd\Web.Data\obj\Debug\Web.Data.Migrations.initial.resources
 C:\Users\MattP\source\repos\Wiki-Redd\Web.Data\obj\Debug\Wiki.Data.csproj.GenerateResource.cache
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Data\obj\Debug\Web.Data.Migrations.oneword.resources
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Data\obj\Debug\Web.Data.Migrations.third.resources
+C:\Users\MattP\source\repos\Wiki-Redd\Web.Data\obj\Debug\Web.Data.Migrations.forth.resources

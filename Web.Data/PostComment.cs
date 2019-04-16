@@ -11,6 +11,7 @@ namespace Wiki.Data
     {
         [Key]
         public int PostCommentId { get; set; }
+        public int PostId { get; set; }
         [Required]
         public string Text { get; set; }
         [Required]

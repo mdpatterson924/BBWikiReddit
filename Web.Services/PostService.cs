@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Wiki.Models;
 using Wiki.Data;
-using Wiki.Models;
+
 
 namespace Wiki.Services
 {
@@ -39,9 +39,7 @@ namespace Wiki.Services
             {
                 var query =
                     ctx
-                        .Posts
-                        .Where(e => e.EditorId == _userId)
-                        .Select(
+                        .Posts.Select(
                             e =>
                                 new PostListItem
                                 {
@@ -61,7 +59,7 @@ namespace Wiki.Services
                 var entity =
                     ctx
                         .Posts
-                        .Single(e => e.EditorId == _userId && e.PostId == noteId);
+                        .Single(e => e.PostId == noteId);
 
                 return
                     new PostDetail
