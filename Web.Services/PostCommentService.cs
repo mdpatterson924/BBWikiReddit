@@ -53,14 +53,14 @@ namespace Wiki.Services
                 return query.ToArray();
             }
         }
-        public PostCommentDetail GetPostCommentById(int noteId)
+        public PostCommentDetail GetPostCommentById(int postCommentId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .PostComments
-                        .Single(e => e.EditorId == _userId && e.PostCommentId == noteId);
+                        .Single(e => e.EditorId == _userId && e.PostCommentId == postCommentId);
 
                 return
                     new PostCommentDetail

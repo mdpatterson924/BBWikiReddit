@@ -18,7 +18,13 @@ namespace Wiki.MVC.Controllers
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new PostService(userId);
             ViewBag.PostDetails = service.GetPostById(id);
-            return View();
+
+            var model = new PostCommentCreate
+            {
+                PostId = id,
+            };
+
+            return View(model);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -31,10 +37,10 @@ namespace Wiki.MVC.Controllers
 
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new PostCommentService(userId);
-
+            
             service.CreatePostComment(model);
 
-            return RedirectToAction("Details", "Post", model.PostId);
+            return RedirectToAction($"Details/{model.PostId}", "Post");
         }
         public ActionResult Details(int id)
         {

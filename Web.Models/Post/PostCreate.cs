@@ -9,7 +9,7 @@ namespace Wiki.Models
 {
     public class PostCreate
     {
-        [Required]
+        
         public string Catagory { get; set; }
         public string Text { get; set; }
     }

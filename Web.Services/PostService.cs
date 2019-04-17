@@ -52,14 +52,14 @@ namespace Wiki.Services
                 return query.ToArray();
             }
         }
-        public PostDetail GetPostById(int noteId)
+        public PostDetail GetPostById(int postId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Posts
-                        .Single(e => e.PostId == noteId);
+                        .Single(e => e.PostId == postId);
 
                 return
                     new PostDetail
@@ -80,11 +80,11 @@ namespace Wiki.Services
                 var entity =
                 ctx
                    .Posts
-                   .Single(e => e.PostId == model.PostId && e.EditorId == _userId);
+                   .Single(e => e.PostId == model.PostId);
 
                 entity.Catagory = model.Catagory;
                 entity.Text = model.Text;
-                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+                //entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
             }
