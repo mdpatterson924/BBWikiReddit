@@ -60,7 +60,7 @@ namespace Wiki.Services
                 var entity =
                     ctx
                         .PostComments
-                        .Single(e => e.EditorId == _userId && e.PostCommentId == postCommentId);
+                        .Single(e => e.PostCommentId == postCommentId);
 
                 return
                     new PostCommentDetail
@@ -94,7 +94,7 @@ namespace Wiki.Services
                 var entity =
                 ctx
                    .PostComments
-                   .Single(e => e.EditorId == _userId && e.PostCommentId == id);
+                   .Single(e => e.PostCommentId == id);
 
                 ctx.PostComments.Remove(entity);
 

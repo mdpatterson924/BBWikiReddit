@@ -96,7 +96,7 @@ namespace Wiki.Services
                 var entity =
                 ctx
                    .Posts
-                   .Single(e => e.EditorId == _userId && e.PostId == id);
+                   .Single(e => e.PostId == id);
 
                 ctx.Posts.Remove(entity);
 

@@ -12,27 +12,27 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.CommentId)
+            @Html.DisplayNameFor(model => model.PostCommentId)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CommentId)
+            @Html.DisplayFor(model => model.PostCommentId)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CommentCatagory)
+            @Html.DisplayNameFor(model => model.Catagory)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CommentCatagory)
+            @Html.DisplayFor(model => model.Catagory)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CommentText)
+            @Html.DisplayNameFor(model => model.Text)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CommentText)
+            @Html.DisplayFor(model => model.Text)
         </dd>
 
         <dt>
@@ -58,7 +58,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Details", "Details", "PostComment", null)
         </div>
     }
 </div>

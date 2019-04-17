@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Wiki.Data;
 using Wiki.Models;
 using Wiki.Services;
 
@@ -99,8 +100,8 @@ namespace Wiki.MVC.Controllers
         {
             var svc = CreatePostCommentService();
             var model = svc.DeletePostComment(id);
-
-            return RedirectToAction("Index");
+         
+            return RedirectToAction("Index","Post");
         }
         private PostCommentService CreatePostCommentService()
         {
