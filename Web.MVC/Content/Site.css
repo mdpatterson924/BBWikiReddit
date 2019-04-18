@@ -1,6 +1,10 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url('../Content/Assets/Index.png');
+    background-position: center;
+    background-size: cover;
+    height: 100%;
 }
 
 /* Set padding to keep content from hitting the edges */
