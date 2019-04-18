@@ -48,7 +48,10 @@ namespace Wiki.MVC.Controllers
             var svc = CreatePostCommentService();
             var model = svc.GetPostCommentById(id);
 
-            return View(model);
+            var threadComments = CreateThreadService().GetThreads();
+            var modelTwo = Tuple.Create(model, threadComments);
+
+            return View(modelTwo);
         }
         public ActionResult Edit(int id)
         {
@@ -107,6 +110,12 @@ namespace Wiki.MVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new PostCommentService(userId);
+            return service;
+        }
+        private ThreadService CreateThreadService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ThreadService(userId);
             return service;
         }
     }   

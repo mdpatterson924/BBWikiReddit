@@ -15,16 +15,25 @@ namespace Wiki.MVC.Controllers
         public ActionResult Index()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
+            //var pcservice = new PostCommentService(userId);
             var service = new ThreadService(userId);
             var model = service.GetThreads();
             return View(model);
         }
+        //Get Create
         public ActionResult Create(int id)
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new PostCommentService(userId);
-            ViewBag.PostCommentDetails = service.GetPostCommentById(id);
-            return View();
+            //var userId = Guid.Parse(User.Identity.GetUserId());
+            //var service = new ThreadService(userId);
+            //ViewBag.PostCommentDetails = service.GetPostCommentById(id);
+
+
+            var model = new ThreadCreate
+            {
+                PostCommentId = id,
+            };
+
+            return View(model);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -37,10 +46,14 @@ namespace Wiki.MVC.Controllers
 
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new ThreadService(userId);
+            if (service.CreateThread(model))
+            {
+                return RedirectToAction("Index");
+            }
 
-            service.CreateThread(model);
+            ModelState.AddModelError("", "Thread could not be created");
 
-            return RedirectToAction("Index");
+            return View(model);
         }
         public ActionResult Details(int id)
         {
@@ -58,7 +71,7 @@ namespace Wiki.MVC.Controllers
                 {
                     ThreadId = detail.ThreadId,
                     Text = detail.Text,
-                    
+
                 };
             return View(model);
         }

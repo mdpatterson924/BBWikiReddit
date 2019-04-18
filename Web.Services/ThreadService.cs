@@ -21,6 +21,7 @@ namespace Wiki.Services
                 new Thread()
                 {
                     EditorId = _userId,
+                    PostCommentId = model.PostCommentId,
                     Text = model.Text,
                     CreadtedUtc = DateTimeOffset.Now
                 };
@@ -44,6 +45,7 @@ namespace Wiki.Services
                                 new ThreadListItem
                                 {
                                     ThreadId = e.ThreadId,
+                                    Text = e.Text,
                                     CreatedUtc = e.CreadtedUtc
                                 }
                         );
