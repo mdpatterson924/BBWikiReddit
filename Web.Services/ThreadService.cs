@@ -32,14 +32,14 @@ namespace Wiki.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        public IEnumerable<ThreadListItem> GetThreads()
+        public IEnumerable<ThreadListItem> GetThreads(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
                         .Threads
-                        .Where(e => e.EditorId == _userId)
+                        .Where(e => e.PostCommentId == id)
                         .Select(
                             e =>
                                 new ThreadListItem

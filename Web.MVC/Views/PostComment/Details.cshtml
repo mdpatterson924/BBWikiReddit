@@ -84,9 +84,9 @@
                 @Html.DisplayFor(modelItem => item.CreatedUtc)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", "PostComment", new { id = item.ThreadId }, null) |
-                @Html.ActionLink("Details", "Details", "PostComment", new { id = item.ThreadId }, null) |
-                @Html.ActionLink("Delete", "Delete", "PostComment", new { id = item.ThreadId }, null)
+                @Html.ActionLink("Edit", "Edit", "Thread", new { id = item.ThreadId }, null) |
+                @*@Html.ActionLink("Details", "Details", "PostComment", new { id = item.ThreadId }, null) |*@
+                @Html.ActionLink("Delete", "Delete", "Thread", new { id = item.ThreadId }, null)
             </td>
         </tr>
     }

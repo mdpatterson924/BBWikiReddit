@@ -48,7 +48,7 @@ namespace Wiki.MVC.Controllers
             var svc = CreatePostCommentService();
             var model = svc.GetPostCommentById(id);
 
-            var threadComments = CreateThreadService().GetThreads();
+            var threadComments = CreateThreadService().GetThreads(id);
             var modelTwo = Tuple.Create(model, threadComments);
 
             return View(modelTwo);

@@ -12,20 +12,20 @@ namespace Wiki.MVC.Controllers
     public class ThreadController : Controller
     {
         // GET: Thread
-        public ActionResult Index()
-        {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            //var pcservice = new PostCommentService(userId);
-            var service = new ThreadService(userId);
-            var model = service.GetThreads();
-            return View(model);
-        }
+        //public ActionResult Index()
+        //{
+        //    var userId = Guid.Parse(User.Identity.GetUserId());
+        //    //var pcservice = new PostCommentService(userId);
+        //    var service = new ThreadService(userId);
+        //    var model = service.GetThreads();
+        //    return View(model);
+        //}
         //Get Create
         public ActionResult Create(int id)
         {
-            //var userId = Guid.Parse(User.Identity.GetUserId());
-            //var service = new ThreadService(userId);
-            //ViewBag.PostCommentDetails = service.GetPostCommentById(id);
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ThreadService(userId);
+            ViewBag.PostCommentDetails = service.GetThreadById(id);
 
 
             var model = new ThreadCreate
@@ -48,7 +48,7 @@ namespace Wiki.MVC.Controllers
             var service = new ThreadService(userId);
             if (service.CreateThread(model))
             {
-                return RedirectToAction("Index");
+                return RedirectToAction($"Details/{model.PostCommentId}", "PostComment");
             }
 
             ModelState.AddModelError("", "Thread could not be created");

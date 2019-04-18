@@ -32,6 +32,7 @@ namespace Wiki.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
         public IEnumerable<PostCommentListItem> GetPosts(int id)
         {
             using (var ctx = new ApplicationDbContext())
