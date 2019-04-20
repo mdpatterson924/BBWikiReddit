@@ -68,7 +68,9 @@ namespace Wiki.Services
                         ThreadId = entity.ThreadId,
                         Text = entity.Text,
                         CreatedUtc = entity.CreadtedUtc,
-                        ModifiedUtc = entity.ModifiedUtc
+                        ModifiedUtc = entity.ModifiedUtc,
+                        PostCommentId =         entity.PostCommentId
+                     
 
                     };
             }

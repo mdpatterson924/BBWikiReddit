@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Wiki.Models.PostCommentListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PostCommentId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Catagory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostCommentId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Catagory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedUtc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PostCommentId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PostCommentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PostCommentId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -13,5 +13,6 @@ namespace Wiki.Models.Thread
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
         public override string ToString() => $"[{ThreadId}]";
+        public int PostCommentId { get; set; }
     }
 }

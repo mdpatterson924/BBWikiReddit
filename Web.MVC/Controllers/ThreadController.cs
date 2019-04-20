@@ -24,8 +24,8 @@ namespace Wiki.MVC.Controllers
         public ActionResult Create(int id)
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new ThreadService(userId);
-            ViewBag.PostCommentDetails = service.GetThreadById(id);
+            var service = new PostCommentService(userId);
+            ViewBag.PostCommentDetails = service.GetPostCommentById(id);
 
 
             var model = new ThreadCreate
@@ -111,9 +111,10 @@ namespace Wiki.MVC.Controllers
         public ActionResult DeleteThread(int id)
         {
             var svc = CreateThreadService();
-            var model = svc.DeleteThread(id);
+            var model = svc.GetThreadById(id);
+            svc.DeleteThread(id);
 
-            return RedirectToAction("Index");
+            return RedirectToAction($"Details/{model.PostCommentId}", "PostComment");
         }
         public ThreadService CreateThreadService()
         {
