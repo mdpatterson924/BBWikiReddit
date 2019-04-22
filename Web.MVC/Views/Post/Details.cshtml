@@ -9,13 +9,13 @@
  
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.Item1.PostId)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Item1.PostId)
-        </dd>
+        </dd>*@
 
         <dt>
             @Html.DisplayNameFor(model => model.Item1.Catagory)
@@ -34,11 +34,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Item1.CreatedUtc)
+            @Html.DisplayNameFor(model => model.Item1.CreatedUtc.Date)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Item1.CreatedUtc)
+            @Html.DisplayFor(model => model.Item1.CreatedUtc.Date)
         </dd>
 
         <dt>
@@ -56,6 +56,7 @@
     @Html.ActionLink("Back to List", "Index") |
     @Html.ActionLink("Create Comment", "Create", "PostComment", new { id = Model.Item1.PostId }, null)
 </p>
+
 <table class="table">
     <tr>
         <th>
@@ -80,7 +81,7 @@
                 @Html.DisplayFor(modelItem => item.Catagory)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CreatedUtc)
+                @Html.DisplayFor(modelItem => item.CreatedUtc.Date)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", "PostComment", new { id = item.PostCommentId }, null) |

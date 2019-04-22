@@ -71,6 +71,7 @@ namespace Wiki.MVC.Controllers
                 {
                     ThreadId = detail.ThreadId,
                     Text = detail.Text,
+                    PostCommentID = detail.PostCommentId
 
                 };
             return View(model);
@@ -92,7 +93,7 @@ namespace Wiki.MVC.Controllers
             if (service.UpdateThread(model))
             {
                 TempData["SaveResult"] = "Your note was updated.";
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Post");
             }
 
             ModelState.AddModelError("", "Your note could not be updated.");

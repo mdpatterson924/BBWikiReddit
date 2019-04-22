@@ -83,7 +83,7 @@ namespace Wiki.MVC.Controllers
             if (service.UpdateComment(model))
             {
                 TempData["SaveResult"] = "Your note was updated.";
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Post");
             }
 
             ModelState.AddModelError("", "Your note could not be updated.");

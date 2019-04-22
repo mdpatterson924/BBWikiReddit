@@ -53,14 +53,14 @@ namespace Wiki.Services
                 return query.ToArray();
             }
         }
-        public ThreadDetail GetThreadById(int noteId)
+        public ThreadDetail GetThreadById(int threadId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Threads
-                        .Single(e => e.EditorId == _userId && e.ThreadId == noteId);
+                        .Single(e => e.ThreadId == threadId);
 
                 return
                     new ThreadDetail
@@ -82,7 +82,7 @@ namespace Wiki.Services
                 var entity =
                 ctx
                    .Threads
-                   .Single(e => e.ThreadId == model.ThreadId && e.EditorId == _userId);
+                   .Single(e => e.EditorId == _userId && e.ThreadId == model.ThreadId);
 
                 
                 entity.Text = model.Text;

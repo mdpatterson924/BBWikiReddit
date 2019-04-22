@@ -10,5 +10,6 @@ namespace Wiki.Models.Thread
     {
         public int ThreadId { get; set; }
         public string Text { get; set; }
+        public int PostCommentID { get; set; }
     }
 }

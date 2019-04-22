@@ -4,6 +4,7 @@
     ViewBag.Title = "Index";
 }
 
+
 <h2>Post</h2>
 
 <p>
@@ -29,7 +30,7 @@
             @Html.DisplayNameFor(model => model.Catagory)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CreatedUtc)
+            @Html.DisplayNameFor(model => model.CreatedUtc.Date)
         </th>
         <th></th>
     </tr>
@@ -44,12 +45,12 @@
                 @Html.DisplayFor(modelItem => item.Catagory)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CreatedUtc)
+                @Html.DisplayFor(modelItem => item.CreatedUtc.Date)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new {  id=item.PostId }) |
                 @Html.ActionLink("Comments", "Details", new {  id=item.PostId }) |
-                @Html.ActionLink("Delete", "Delete", new {  id=item.PostId })|
+                @Html.ActionLink("Delete", "Delete", new {  id=item.PostId })
                 
             </td>
         </tr>
