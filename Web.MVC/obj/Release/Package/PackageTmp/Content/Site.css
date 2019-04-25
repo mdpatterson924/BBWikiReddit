@@ -35,3 +35,7 @@ textarea {
     .container.body-content a{
         color: darkblue;
     }
+    .table{
+        opacity:0.8;
+        background-color:aliceblue
+    }

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wiki.Services", "Web.Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wiki.Models", "Web.Models\Wiki.Models.csproj", "{800802DA-361D-47A6-BD0D-2CF42D653A71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wiki.WebAPI", "Wiki.WebAPI\Wiki.WebAPI.csproj", "{3A5B2BBD-EAE6-45FF-A883-44D82AF891AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{800802DA-361D-47A6-BD0D-2CF42D653A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{800802DA-361D-47A6-BD0D-2CF42D653A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{800802DA-361D-47A6-BD0D-2CF42D653A71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A5B2BBD-EAE6-45FF-A883-44D82AF891AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A5B2BBD-EAE6-45FF-A883-44D82AF891AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A5B2BBD-EAE6-45FF-A883-44D82AF891AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A5B2BBD-EAE6-45FF-A883-44D82AF891AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,9 +17,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Text)
         </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.CreatedUtc)
-        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedUtc.Date)
+        </th>
         <th></th>
     </tr>
 
@@ -32,9 +32,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.Text)
         </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.CreatedUtc)
-        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedUtc.Date)
+        </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new {  id=item.ThreadId }) |
             @Html.ActionLink("Details", "Details", new {  id=item.ThreadId }) |

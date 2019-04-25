@@ -13,6 +13,10 @@ using Wiki.Data;
 
 namespace Web.MVC.Controllers
 {
+    #if !DEBUG
+         [RequireHttps]
+
+    #endif
     [Authorize]
     public class AccountController : Controller
     {

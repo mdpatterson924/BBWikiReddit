@@ -10,13 +10,13 @@
     
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.Item1.PostCommentId)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Item1.PostCommentId)
-        </dd>
+        </dd>*@
 
         <dt>
             @Html.DisplayNameFor(model => model.Item1.Catagory)
@@ -35,11 +35,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Item1.CreatedUtc)
+            @Html.DisplayNameFor(model => model.Item1.CreatedUtc.Date)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Item1.CreatedUtc)
+            @Html.DisplayFor(model => model.Item1.CreatedUtc.Date)
         </dd>
 
         <dt>
@@ -54,7 +54,7 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Item1.PostCommentId }) |
-    @Html.ActionLink("Back to List", "Details", new { id = Model.Item1.PostCommentId }) |
+    @Html.ActionLink("Post List","Index","Post") |
     @Html.ActionLink("Create Thread", "Create", "Thread", new { id = Model.Item1.PostCommentId }, null)
 </p>
 <table class="table">
@@ -81,7 +81,7 @@
                 @Html.DisplayFor(modelItem => item.Text)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CreatedUtc)
+                @Html.DisplayFor(modelItem => item.CreatedUtc.Date)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", "Thread", new { id = item.ThreadId }, null) |
